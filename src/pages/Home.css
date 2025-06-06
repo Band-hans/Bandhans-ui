@@ -1,0 +1,189 @@
+.home-container {
+  font-family: 'Arial', sans-serif;
+}
+
+/* Hero Section */
+.hero-section {
+  position: relative;
+  height: 100vh;
+  overflow: hidden;
+}
+
+.hero-bg {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  z-index: 1;
+}
+
+.hero-overlay {
+  position: relative;
+  z-index: 2;
+  background: rgba(0, 0, 0, 0.5);
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  color: white;
+  padding: 0 20px;
+}
+
+.hero-slogan {
+  font-size: 3rem;
+  font-weight: bold;
+  margin-bottom: 20px;
+  text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.6);
+}
+
+.hero-buttons button {
+  margin: 10px;
+  padding: 10px 20px;
+  font-size: 1rem;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+.join-btn {
+  background-color: #e91e63;
+  color: white;
+}
+
+.signin-btn {
+  background-color: #fff;
+  color: #e91e63;
+  border: 2px solid #e91e63;
+}
+
+/* Success Stories */
+.success-stories {
+  padding: 60px 20px;
+  background-color: #f8f9fa;
+  text-align: center;
+}
+
+.success-stories h2 {
+  font-size: 2rem;
+  margin-bottom: 30px;
+}
+
+.stories-grid {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 20px;
+}
+
+.story-card {
+  background: white;
+  border-radius: 20px;
+  box-shadow: 0 4px 10px rgba(168, 161, 161, 0.1);
+  padding: 20px;
+  width: 100%;
+  max-width: 350px;
+  text-align: center;
+  transition: transform 0.3s ease;
+}
+
+.story-card:hover {
+  transform: translateY(-5px);
+}
+
+.story-image {
+  width: 100%;
+  height: 220px;
+  object-fit: cover;
+  border-radius: 10px;
+  margin-bottom: 15px;
+}
+
+.story-name {
+  font-size: 1.1rem;
+  color: #e91e63;
+  font-weight: bold;
+}
+
+/* About Section */
+.about-section {
+  padding: 60px 20px;
+  display: flex;
+  justify-content: center;
+  background-color: #f3f4f6;
+}
+
+.about-box {
+  background: white;
+  padding: 30px 40px;
+  max-width: auto;
+  width: auto;
+  border-radius: 12px;
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1);
+  text-align: left;
+}
+
+.about-box h3 {
+  font-size: 1.8rem;
+  margin-bottom: 15px;
+  color: #e91e63;
+}
+
+.about-box p {
+  font-size: 1rem;
+  color: #333;
+  line-height: 1.6;
+}
+
+.read-more {
+  display: inline-block;
+  margin-top: 10px;
+  color: #e91e63;
+  cursor: pointer;
+  font-weight: 500;
+}
+
+.read-more:hover {
+  text-decoration: underline;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+  .hero-slogan {
+    font-size: 2.2rem;
+  }
+
+  .hero-buttons button {
+    width: 100%;
+    max-width: 200px;
+  }
+
+  .about-box {
+    padding: 20px;
+  }
+
+  .story-card {
+    max-width: 90%;
+  }
+}
+
+@media (max-width: 480px) {
+  .hero-slogan {
+    font-size: 1.8rem;
+  }
+
+  .hero-buttons {
+    flex-direction: column;
+  }
+
+  .hero-buttons button {
+    margin: 10px 0;
+  }
+
+  .story-image {
+    height: 180px;
+  }
+}

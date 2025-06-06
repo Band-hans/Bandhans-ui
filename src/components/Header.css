@@ -1,0 +1,35 @@
+.site-header {
+  background-color: #c4baba;
+  padding: 1rem 2rem;
+  box-shadow: 0 2px 4px rgba(202, 41, 41, 0.1);
+}
+
+.header-container {
+  display: flex;
+  justify-content: space-between; /* Logo left, menu right */
+  align-items: center;
+}
+
+.logo-img {
+  height: 50px;
+  width: auto;
+}
+
+.hamburger {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  width: 25px;
+  height: 18px;
+  cursor: pointer;
+}
+
+.hamburger span {
+  display: block;
+  height: 3px;
+  background-color: #1e1c1c;
+  border-radius: 3px;
+}
+.hamburger span:nth-child(1) {
+  width: 100%;
+}
