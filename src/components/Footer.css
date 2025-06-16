@@ -1,0 +1,90 @@
+.footer {
+  background-color: #fff;
+  color: #000;
+  font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+  border-top: 1px solid #ddd;
+}
+
+.footer-top {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 2rem 1.5rem;
+  gap: 2rem;
+}
+
+.footer-section {
+  flex: 1 1 250px;
+  min-width: 250px;
+}
+
+.footer-heading {
+  font-size: 1.25rem;
+  margin-bottom: 0.75rem;
+}
+
+.footer-text {
+  line-height: 1.6;
+  font-size: 1rem;
+  margin: 0.2rem 0;
+}
+
+.footer-form {
+  display: flex;
+  gap: 0.5rem;
+  flex-wrap: wrap;
+}
+
+.footer-input {
+  flex: 1 1 auto;
+  padding: 0.5rem 0.75rem;
+  font-size: 1rem;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  outline: none;
+  transition: border-color 0.3s ease, box-shadow 0.3s ease;
+}
+
+.footer-input:focus {
+  border-color: #800000;
+  box-shadow: 0 0 5px #80000066;
+}
+
+.footer-button {
+  background-color: #800000;
+  color: #fff;
+  border: none;
+  padding: 0.5rem 1.25rem;
+  font-size: 1rem;
+  border-radius: 4px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+.footer-button:hover {
+  background-color: #4b0000;
+}
+
+.footer-bottom {
+  background-color: #fff;
+  color: #000;
+  border-top: 1px solid #ddd;
+  padding: 1rem;
+  text-align: center;
+  font-size: 0.875rem;
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+  .footer-top {
+    flex-direction: column;
+  }
+
+  .footer-section {
+    min-width: 100%;
+  }
+}
+/* End of Footer.css */
+/* Compare this snippet from src/components/Sidebar.css: */

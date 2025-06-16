@@ -1,0 +1,103 @@
+.sidebar {
+  position: fixed;
+  top: 0;
+  right: -75vw;          /* Start fully hidden to right */
+  width: 75vw;           /* Cover 75% of viewport width */
+  max-width: 400px;      /* Optional max width */
+  height: 100vh;         /* Full viewport height */
+  background-color: #fff;
+  box-shadow: -2px 0 8px rgba(0, 0, 0, 0.2);
+  padding: 20px;
+  transition: right 0.3s ease;
+  z-index: 1000;
+  overflow-y: auto;      /* Scroll if content overflows */
+}
+
+.sidebar.open {
+  right: 0;              /* Slide fully visible */
+}
+
+.close-btn {
+  background: none;
+  border: none;
+  font-size: 28px;
+  float: right;
+  cursor: pointer;
+  line-height: 1;
+}
+
+.sidebar h2 {
+  margin-top: 40px;
+  font-size: 24px;
+  margin-bottom: 20px;
+}
+
+.sidebar-buttons {
+  margin-top: 30px;
+  display: flex;
+  flex-direction: row;   /* Buttons side by side */
+  gap: 15px;
+  justify-content: flex-start;
+}
+
+.login-btn,
+.join-btn {
+  flex: 1;
+  padding: 10px 0;
+  border: 2px solid transparent;
+  cursor: pointer;
+  font-size: 16px;
+  border-radius: 25px;
+  transition: background-color 0.3s ease, border-color 0.3s ease, color 0.3s ease;
+  text-align: center;
+}
+
+
+.login-btn {
+  background-color: white;
+  color: rgb(15, 15, 15);
+  border-color: rgb(15, 15, 15);
+}
+
+.login-btn:hover {
+  background-color: red;
+  color: white;
+  border-color: red;
+}
+
+.join-btn {
+  background-color: red;
+  color:white;
+  border-color:black;
+}
+
+.join-btn:hover {
+  background-color: white;
+  color: black;
+  border-color: red;
+}
+
+/* Overlay styles */
+
+.overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  height: 100vh;
+  background: rgba(255, 255, 255, 0.1);
+  backdrop-filter: blur(6px);
+  -webkit-backdrop-filter: blur(6px); /* Safari */
+  opacity: 0;
+  visibility: hidden;
+  z-index: 999;
+  transition: opacity 0.3s ease;
+  pointer-events: none; /* Prevent clicks when hidden */
+}
+
+.overlay.show {
+  opacity: 1;
+  visibility: visible;
+  pointer-events: auto; /* Enable clicks when visible */
+}
+

@@ -1,12 +1,12 @@
 .site-header {
-  background-color: #c4baba;
+  background-color: maroon;
   padding: 1rem 2rem;
   box-shadow: 0 2px 4px rgba(202, 41, 41, 0.1);
 }
 
 .header-container {
   display: flex;
-  justify-content: space-between; /* Logo left, menu right */
+  justify-content: space-between;
   align-items: center;
 }
 
@@ -15,11 +15,59 @@
   width: auto;
 }
 
+.icon-group {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  position: relative;
+}
+
+.search-icon {
+  background-color: #f0f0f0;
+  border: none;
+  border-radius: 60%;
+  padding: 10px;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: #333;
+}
+
+.search-icon:hover {
+  background-color: #e4e4e4;
+}
+
+.search-bar-expanded {
+  display: flex;
+  align-items: center;
+  background-color: white;
+  padding: 6px 10px;
+  border-radius: 20px;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+}
+
+.search-bar-expanded input {
+  border: none;
+  outline: none;
+  font-size: 14px;
+  padding: 4px 8px;
+  width: 150px;
+}
+
+.close-icon {
+  background: none;
+  border: none;
+  margin-left: 6px;
+  cursor: pointer;
+  color: #333;
+}
+
 .hamburger {
   display: flex;
   flex-direction: column;
   justify-content: space-between;
-  width: 25px;
+  width: 24px;
   height: 18px;
   cursor: pointer;
 }
