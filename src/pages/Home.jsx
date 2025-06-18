@@ -1,11 +1,8 @@
 import React from 'react';
 import './Home.css';
 import Footer from '../components/Footer';
-import ChatBot from '../components/ChatBot';  // ✅ Correct import for the ChatBot component
-// This is the Home component that serves as the main page of the application.
-// It includes a hero section with a background image and a slogan, and it imports the Footer component to display at the bottom of the page.
-// The hero section is styled with a background image and overlay text, providing a welcoming introduction to the Bandhans platform.
-// The hero section features a background image of a couple, a slogan, and a brief description  
+import ChatBot from '../components/ChatBot'; 
+import { Link } from 'react-router-dom';  // Added import for Link
 
 const Home = () => {
   const cards = [
@@ -46,17 +43,32 @@ const Home = () => {
       <section className="cards-section">
         <h2 className="section-title">Everything you need to plan the Events you want</h2>
         <div className="card-grid">
-          {cards.map((card, index) => (
-            <div className="card-box" key={index}>
-              <h3>{card.title}</h3>
-              <p>{card.description}</p>
-            </div>
-          ))}
+          {cards.map((card, index) => {
+            if (card.title === "Registry") {
+              return (
+                <Link
+                  to="/register"
+                  key={index}
+                  className="card-box"
+                  style={{ textDecoration: 'none', color: 'inherit' }}
+                >
+                  <h3>{card.title}</h3>
+                  <p>{card.description}</p>
+                </Link>
+              );
+            }
+            return (
+              <div className="card-box" key={index}>
+                <h3>{card.title}</h3>
+                <p>{card.description}</p>
+              </div>
+            );
+          })}
         </div>
       </section>
 
-{/* Chat Bot at the bottom */}
-<ChatBot />
+      {/* Chat Bot at the bottom */}
+      <ChatBot />
       {/* Footer at the bottom */}
       <Footer />
     </div>
@@ -64,12 +76,5 @@ const Home = () => {
 };
 
 export default Home;
-// This is the Home component that serves as the main page of the application.
-// It includes a hero section with a background image and a slogan, and it imports the Footer component to display at the bottom of the page.
-// The hero section is styled with a background image and overlay text, providing a welcoming introduction to the Bandhans platform.
-//             Terms of Service
-//             Privacy Policy
-//             Other
-// The Footer component is imported from './Footer' and is included at the bottom of the Home component to maintain a consistent layout across the application.
-// The Home component is styled using the 'Home.css' file, which should contain styles for the hero section and other elements.
-// The hero section features a background image of a couple, a slogan, and a brief description to engage users. 
+// This code defines a Home component that serves as the landing page for the application.
+// It includes a hero section with a background image, a slogan, and a description.     
