@@ -21,13 +21,16 @@ const ChatBot = () => {
     setLoading(true);
 
     try {
+      console.log('🔄 Sending to backend:', newMessages);
       const res = await axios.post('http://localhost:5000/api/chat', {
         messages: newMessages,
       });
+      console.log('✅ Response from backend:', res.data);
 
       const botReply = res.data.reply;
       setMessages([...newMessages, { from: 'bot', text: botReply }]);
     } catch (err) {
+      console.error('❌ Chat error:', err);
       setMessages([...newMessages, { from: 'bot', text: "Oops, something went wrong." }]);
     } finally {
       setLoading(false);
@@ -70,5 +73,3 @@ const ChatBot = () => {
 };
 
 export default ChatBot;
-// This ChatBot component provides a simple chat interface where users can ask questions and receive responses from a bot.
-// It uses React hooks for state management and Axios for making API requests to a backend service.         
